@@ -220,7 +220,7 @@ const SignOut = styled.div`
 
 const User = styled(NavList)`
   a > svg {
-    width: 25px;
+    width: 24px;
     border-radius: 50%;
   }
   a > img {
