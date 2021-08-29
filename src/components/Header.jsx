@@ -59,7 +59,7 @@ function Header(props) {
               </a>
 
               <SignOut>
-                  <a></a>
+                <a>Sign Out</a>
               </SignOut>
             </User>
             <Work>
@@ -205,6 +205,19 @@ const NavList = styled.li`
   }
 `;
 
+const SignOut = styled.div`
+  position: absolute;
+  top: 45px;
+  background: white;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  font-size: 160px;
+  text-align: center;
+  display: none;
+  transition: all ease-in 0.2s;
+`;
+
 const User = styled(NavList)`
   a > svg {
     width: 25px;
@@ -218,6 +231,14 @@ const User = styled(NavList)`
   span {
     display: flex;
     align-items: center;
+  }
+  &:hover {
+    ${SignOut} {
+      display: flex;
+      border: 2px solid rgb(10, 102, 194);
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
 const Work = styled(User)`
