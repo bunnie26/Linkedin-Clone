@@ -19,12 +19,58 @@ function Header(props) {
         </Search>
         <Nav>
           <NavListWrap>
-            <NavList>
+            <NavList className="active">
               <a>
                 <img src="/images/nav-home.svg"></img>
                 <span>Home</span>
               </a>
             </NavList>
+            <NavList>
+              <a>
+                <img src="/images/nav-network.svg"></img>
+                <span>My Network</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images/nav-jobs.svg"></img>
+                <span>Jobs</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images/nav-messaging.svg"></img>
+                <span>Messaging</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images/nav-Notifications.svg"></img>
+                <span>Notifications</span>
+              </a>
+            </NavList>
+            <User>
+              <a>
+                <img src="/images/user.svg"></img>
+                <span>
+                  Me
+                  <img src="/images/down-icon.svg"></img>
+                </span>
+              </a>
+
+              <SignOut>
+                  <a></a>
+              </SignOut>
+            </User>
+            <Work>
+              <a>
+                <img src="/images/nav-work.svg"></img>
+                <span>
+                  Work
+                  <img src="/images/down-icon.svg"></img>
+                </span>
+              </a>
+            </Work>
           </NavListWrap>
         </Nav>
       </Content>
@@ -56,7 +102,7 @@ const Logo = styled.span`
 
 const Search = styled.div`
   opacity: 1;
-  flex-grow: 1;
+  flex-grow: 0.25;
   position: relative;
   & > div {
     max-width: 300px;
@@ -67,7 +113,7 @@ const Search = styled.div`
       background-color: #eef3f8;
       border-radius: 3px;
       color: rgba(0, 0, 0, 0.9);
-      width: 218px;
+      width: 280px;
       padding: 0 8px 0 40px;
       line-height: 2;
       font-weight: 500;
@@ -93,7 +139,7 @@ const SearchIcon = styled.div`
 `;
 
 const Nav = styled.nav`
-  margin-left: auto;
+  /* margin-left: auto; */
   display: block;
   @media (max-width: 768px) {
     position: fixed;
@@ -107,6 +153,20 @@ const NavListWrap = styled.ul`
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
+
+  .active {
+    span:after {
+      content: "";
+      transform: scale(1);
+      border-bottom: 2px solid var(--white, #fff);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      transition: transform 0.2s ease-in-out;
+      width: 100%;
+      border-color: rgba(0, 0, 0, 0.9);
+    }
+  }
 `;
 const NavList = styled.li`
   display: flex;
@@ -143,6 +203,25 @@ const NavList = styled.li`
       }
     }
   }
+`;
+
+const User = styled(NavList)`
+  a > svg {
+    width: 25px;
+    border-radius: 50%;
+  }
+  a > img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+`;
+const Work = styled(User)`
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
 `;
 
 export default Header;
