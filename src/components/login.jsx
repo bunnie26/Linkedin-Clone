@@ -78,7 +78,7 @@ const SignIn = styled.a`
   text-align: center;
   transition: all ease-in 0.2s;
   &:hover {
-    background-color: rgba(112, 181, 249, 0.15);
+    background-color:#434649;
   }
 `;
 const Section = styled.section`

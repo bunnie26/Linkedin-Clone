@@ -235,7 +235,7 @@ const User = styled(NavList)`
   &:hover {
     ${SignOut} {
       display: flex;
-      border: 2px solid rgb(10, 102, 194);
+      border: 2px solid rgb(10, 102, 190);
       align-items: center;
       justify-content: center;
     }
