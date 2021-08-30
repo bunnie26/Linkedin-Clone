@@ -78,7 +78,9 @@ const SignIn = styled.a`
   text-align: center;
   transition: all ease-in 0.2s;
   &:hover {
-    background-color:#434649;
+    background-color: rgba(112, 181, 249, 0.15);
+    color: #0a66c2;
+    text-decoration: none;
   }
 `;
 const Section = styled.section`
