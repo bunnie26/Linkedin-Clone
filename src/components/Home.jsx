@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Leftside from "./LeftSide";
+import Main from "./Main";
+import Rightside from "./RightSide";
 
 function Home(props) {
   return (
     <Container>
-      <Section>
+      <Section> 
         <h5>
           <a>Hiring in a hurry? - </a>
         </h5>
@@ -14,9 +17,9 @@ function Home(props) {
         </p>
       </Section>
       <Layout>
-        <div>Left Side</div>
-        <div>Main</div>
-        <div>Right Side</div>
+        <Leftside />
+        <Main />
+        <Rightside />
       </Layout>
     </Container>
   );
