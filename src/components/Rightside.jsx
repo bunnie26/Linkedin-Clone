@@ -106,7 +106,7 @@ const Avatar = styled.div`
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
-  margin-right: 8px;
+  margin-right: 9px;
 `;
 
 const Recommendation = styled.a`
