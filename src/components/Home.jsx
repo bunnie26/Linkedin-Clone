@@ -68,7 +68,7 @@ const Layout = styled.div`
   row-gap: 25px;
   grid-template-rows: auto;
   margin: 25px 0;
-  padding: 0 5px;
+  padding: 0 10px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
