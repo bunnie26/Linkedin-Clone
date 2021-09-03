@@ -50,7 +50,7 @@ const Container = styled.div`
 const CommonCard = styled.div`
   text-align: center;
   overflow: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   background-color: white;
   border-radius: 5px;
   position: relative;
