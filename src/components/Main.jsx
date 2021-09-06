@@ -4,29 +4,48 @@ import styled from "styled-components";
 function Main(props) {
   return (
     <Container>
-      <ShareBox>Share</ShareBox>
+      <ShareBox>
+        Share
+        <div>
+          <img src="/images/user.svg"></img>
+          {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgRZI94ZQlzuE9UMHCjv3MmSqBuwFz8R4uA&usqp=CAU" style={{height:24}}></img> */}
+          <button>Start a post</button>
+        </div>
+        <div>
+          <button>
+            <img src="/images/photo-icon.svg"></img>
+            <span>Photo</span>
+          </button>
+          <button>
+            <img src="/images/video-icon.svg"></img>
+            <span>Video</span>
+          </button>
+          <button>
+            <img src="/images/event-icon.svg"></img>
+            <span>Event</span>
+          </button>
+          <button>
+            <img src="/images/article-icon.svg"></img>
+            <span>Write Article</span>
+          </button>
+        </div>
+      </ShareBox>
       <div>
-        <img src="/images/user.svg"></img>
-        {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgRZI94ZQlzuE9UMHCjv3MmSqBuwFz8R4uA&usqp=CAU" style={{height:24}}></img> */}
-        <button>Start a post</button>
-      </div>
-      <div>
-        <button>
-          <img src="/images/photo-icon.svg"></img>
-          <span>Photo</span>
-        </button>
-        <button>
-          <img src="/images/video-icon.svg"></img>
-          <span>Video</span>
-        </button>
-        <button>
-          <img src="/images/event-icon.svg"></img>
-          <span>Event</span>
-        </button>
-        <button>
-          <img src="/images/article-icon.svg"></img>
-          <span>Write Article</span>
-        </button>
+        <Article>
+          <SharedActor>
+            <a>
+              <img src="/images/user.svg"></img>
+              <div>
+                <span>Title</span>
+                <span>Info</span>
+                <span>Date</span>
+              </div>
+            </a>
+            <button>
+              <img src="/images/ellipses.svg"></img>
+            </button>
+          </SharedActor>
+        </Article>
       </div>
     </Container>
   );
@@ -52,6 +71,59 @@ const ShareBox = styled(CommonCard)`
   color: #958b7b;
   margin: 0px 0px 8px;
   background-color: white;
+  div {
+    button {
+      outline: none;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 48px;
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+    &:first-child {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px 0 16px;
+      img {
+        width: 48px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      button {
+        margin: 4px 0;
+        flex-grow: 1;
+        border-radius: 35px;
+        padding-left: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        background-color: white;
+        text-align: left;
+      }
+    }
+    &:nth-child(2) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-bottom: 4px;
+      button {
+        img {
+          margin: 0 4px 0 -2px;
+        }
+        span {
+          color: #70b5f9;
+        }
+      }
+    }
+  }
+`;
+
+const Article = styled(CommonCard)`
+  padding: 0;
+  margin: 0 0 8px;
+  overflow: visible;
 `;
 
 export default Main;
