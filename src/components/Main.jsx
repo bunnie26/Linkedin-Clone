@@ -12,31 +12,19 @@ function Main(props) {
       </div>
       <div>
         <button>
-          <img
-            src="https://cdn0.iconfinder.com/data/icons/thin-line-color-2/21/23-512.png"
-            style={{ height: 24, width: 24, border: "none" }}
-          ></img>
+          <img src="/images/photo-icon.svg"></img>
           <span>Photo</span>
         </button>
         <button>
-          <img
-            src="https://www.seekpng.com/png/detail/10-105240_video-whatsapp-whatsapp-video-call-icon.png"
-            style={{ height: 24, width: 24, border: "none" }}
-          ></img>
+          <img src="/images/video-icon.svg"></img>
           <span>Video</span>
         </button>
         <button>
-          <img
-            src="https://www.kindpng.com/picc/m/73-732949_empty-house-insurance-calendar-icon-transparent-transparent-background.png"
-            style={{ height: 24, width: 24, border: "none" }}
-          ></img>
+          <img src="/images/event-icon.svg"></img>
           <span>Event</span>
         </button>
         <button>
-          <img
-            src="https://spng.subpng.com/20210307/tq/transparent-article-icon-blog-icon-web-design-icon-604592bd4c45e7.3724763516151722853124.jpg"
-            style={{ height: 24, width: 24, border: "none" }}
-          ></img>
+          <img src="/images/article-icon.svg"></img>
           <span>Write Article</span>
         </button>
       </div>
