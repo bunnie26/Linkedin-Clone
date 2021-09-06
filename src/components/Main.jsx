@@ -126,4 +126,46 @@ const Article = styled(CommonCard)`
   overflow: visible;
 `;
 
+const SharedActor = styled.div`
+  padding-right: 48px;
+  flex-wrap: nowrap;
+  padding: 12px 16px 0;
+  margin-bottom: 8px;
+  align-items: center;
+  display: flex;
+  a {
+    margin-right: 12px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+
+    img {
+      width: 48px;
+      width: 48px;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 0;
+      margin-left: 8px;
+      overflow: hidden;
+      span {
+        text-align: left;
+        &:first-child {
+          font-size: 14px;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 1);
+        }
+        &:nth-child(n + 1) {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+`;
+
 export default Main;
